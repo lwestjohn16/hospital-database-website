@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		// regular expression to match only alphabets
+		var re = /^[a-zA-Z]+$/;
+		// regular expression to match only numbers
+		var reg = /^\d+$/;
+		// regular expression to match only alphanumeric characters and spaces
+		// var re = /^[\w ]+$/;
+		function checkDoc(form)
+	    {
+			// validation fails if the input is blank
+			if(form.docId.value == "" && form.docName.value == "" && form.docSal.value == "") {
+				alert("Error: Input is empty!\nPlease enter search information.");
+				form.docId.focus();
+				return false;
+			}
+			// validation fails if the input doesn't match our regular expression
+			if(!reg.test(form.docId.value)) {
+				if(form.docId.value != ""){
+					alert("Error: Input contains invalid characters!\nPlease enter numbers only.");
+					form.docId.focus();
+					return false;
+				}
+				else{
+					form.docId.value = "0";
+				}
+			}
+			if(!re.test(form.docName.value)) {
+				if(form.docName.value != ""){
+					alert("Error: Input contains invalid characters!\nPlease enter alphabetical characters only.");
+					form.docName.focus();
+					return false;
+				}
+				else{
+					form.docName.value = "aaaa";
+				}
+			}
+			if(!reg.test(form.docSal.value)) {
+				if(form.docSal.value != ""){
+					alert("Error: Input contains invalid characters!\nPlease enter numbers only.");
+					form.docSal.focus();
+					return false;
+				}
+				else{
+					form.docSal.value = "0";
+				}
+			}
+			// validation was successful
+			return true;
+		}
+		function checkPat(form)
+	    {
+			// validation fails if the input is blank
+			if(form.patId.value == "" && form.patName.value == "" && form.disease.value == "") {
+				alert("Error: Input is empty!\nPlease enter search information.");
+				form.patId.focus();
+				return false;
+			}
+			// validation fails if the input doesn't match our regular expression
+			if(!reg.test(form.patId.value)) {
+				if(form.patId.value != ""){
+					alert("Error: Input contains invalid characters!\nPlease enter numbers only.");
+					form.patId.focus();
+					return false;
+				}
+				else{
+					form.patId.value = "0";
+				}
+			}
+			if(!re.test(form.patName.value)) {
+				if(form.patName.value != ""){
+					alert("Error: Input contains invalid characters!\nPlease enter alphabetical characters only.");
+					form.patName.focus();
+					return false;
+				}
+				else{
+					form.patName.value = "aaaa";
+				}
+			}
+			if(!re.test(form.disease.value)) {
+				if(form.disease.value != ""){
+					alert("Error: Input contains invalid characters!\nPlease enter numbers only.");
+					form.disease.focus();
+					return false;
+				}
+				else{
+					form.disease.value = "aaaa";
+				}
+			}
+			// validation was successful
+			return true;
+		}
+		function checkRoom(form)
+	    {
+			// validation fails if the input is blank
+			if(form.roomNum.value == "" && form.ward.value == "" && form.floor.value == "") {
+				alert("Error: Input is empty!\nPlease enter search information.");
+				form.roomNum.focus();
+				return false;
+			}
+			// validation fails if the input doesn't match our regular expression
+			if(!reg.test(form.roomNum.value)) {
+				if(form.roomNum.value != ""){
+					alert("Error: Input contains invalid characters!\nPlease enter numbers only.");
+					form.roomNum.focus();
+					return false;
+				}
+				else{
+					form.roomNum.value = "0";
+				}
+			}
+			if(!re.test(form.ward.value)) {
+				if(form.ward.value != ""){
+					alert("Error: Input contains invalid characters!\nPlease enter alphabetical characters only.");
+					form.ward.focus();
+					return false;
+				}
+				else{
+					form.ward.value = "aaaa";
+				}
+			}
+			if(!reg.test(form.floor.value)) {
+				if(form.floor.value != ""){
+					alert("Error: Input contains invalid characters!\nPlease enter numbers only.");
+					form.floor.focus();
+					return false;
+				}
+				else{
+					form.floor.value = "0";
+				}
+			}
+			// validation was successful
+			return true;
+		}
+		function checkPharm(form)
+	    {
+			// validation fails if the input is blank
+			if(form.pharmId.value == "" && form.pharmName == "" && form.pharmSal == "") {
+				alert("Error: Input is empty!\nPlease enter search information.");
+				form.pharmId.focus();
+				return false;
+			}
+			// validation fails if the input doesn't match our regular expression
+			if(!reg.test(form.pharmId.value)) {
+				if(form.pharmId.value != ""){
+					alert("Error: Input contains invalid characters!\nPlease enter numbers only.");
+					form.pharmId.focus();
+					return false;
+				}
+				else{
+					form.pharmId.value = "0";
+				}
+			}
+			if(!re.test(form.pharmName.value)) {
+				if(form.pharmName.value != ""){
+					alert("Error: Input contains invalid characters!\nPlease enter alphabetical characters only.");
+					form.pharmName.focus();
+					return false;
+				}
+				else{
+					form.pharmName.value = "aaaa";
+				}
+			}
+			if(!reg.test(form.pharmSal.value)) {
+				if(form.pharmSal.value != ""){
+					alert("Error: Input contains invalid characters!\nPlease enter numbers only.");
+					form.pharmSal.focus();
+					return false;
+				}
+				else{
+					form.pharmSal.value = "0";
+				}
+			}
+			// validation was successful
+			return true;
+		}
+		function checkPre(form)
+	    {
+			// validation fails if the input is blank
+			if(form.ordNum.value == "" && form.ordCost == "" && form.drug == "") {
+				alert("Error: Input is empty!\nPlease enter search information.");
+				form.ordNum.focus();
+				return false;
+			}
+			// validation fails if the input doesn't match our regular expression
+			if(!reg.test(form.ordNum.value)) {
+				if(form.ordNum.value != ""){
+					alert("Error: Input contains invalid characters!\nPlease enter numbers only.");
+					form.ordNum.focus();
+					return false;
+				}
+				else{
+					form.ordNum.value = "0";
+				}
+			}
+			if(!reg.test(form.ordCost.value)) {
+				if(form.ordCost.value != ""){
+					alert("Error: Input contains invalid characters!\nPlease enter alphabetical characters only.");
+					form.ordCost.focus();
+					return false;
+				}
+				else{
+					form.ordCost.value = "0";
+				}
+			}
+			if(!re.test(form.drug.value)) {
+				if(form.drug.value != ""){
+					alert("Error: Input contains invalid characters!\nPlease enter numbers only.");
+					form.drug.focus();
+					return false;
+				}
+				else{
+					form.drug.value = "aaaa";
+				}
+			}
+			// validation was successful
+			return true;
+		}
+	</script>
+</head>
+<body bgcolor="green">
+	<h1 style="font-size:50px; text-align:center">Welcome to General Hospital!</h1>
+	<a href="addrecord.html">Add Record</a>
+	<a href="deleterecord.html">Delete Record</a>
+	<p>What would you like to know about?</p>
+	<div>
+		<h3>Doctors</h3>
+		<form name="doctor" method="post" action="searchDoc.php" onSubmit="return checkDoc(this)">
+			<input type="number" name="docId">ID<br>
+			<input type="text" name="docName">Name<br>
+			<input type="number" name="docSal">Salary<br>
+			<input type="submit" value="Search"><br>
+		</form>
+	</div>
+	<div>
+		<h3>Patients</h3>
+		<form name="patient" method="post" action="searchPat.php" onSubmit="return checkPat(this)">
+			<input type="text" name="patId">ID<br>
+			<input type="text" name="patName">Name<br>
+			<input type="text" name="disease">Disease<br>
+			<input type="submit" value="Search"><br>
+		</form>
+	</div>
+	<div>
+		<h3>Rooms</h3>
+		<form name="room" method="post" action="searchRoom.php" onSubmit="return checkRoom(this)">
+			<input type="text" name="roomNum">Number<br>
+			<input type="text" name="ward">Ward<br>
+			<input type="text" name="floor">Floor<br>
+			<input type="submit" value="Search"><br>
+		</form>
+	</div>
+	<div>
+		<h3>Prescriptions</h3>
+		<form name="prescription" method="post" action="searchPre.php" onSubmit="return checkPre(this)">
+			<input type="text" name="ordNum">Order Number<br>
+			<input type="text" name="ordCost">Cost<br>
+			<input type="text" name="drug">Medicine Prescibed<br>
+			<input type="submit" value="Search"><br>
+		</form>
+	</div>
+	<div>
+		<h3>Pharmacists</h3>
+		<form name="pharmacist" method="post" action="searchPharm.php" onSubmit="return checkPharm(this)">
+			<input type="text" name="pharmId">ID<br>
+			<input type="text" name="pharmName">Name<br>
+			<input type="text" name="pharmSal">Salary<br>
+			<input type="submit" value="Search"><br>
+		</form>
+	</div>
+</body>
+</html>

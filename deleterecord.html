@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		// regular expression to match only alphabets
+		var re = /^[a-zA-Z]+$/;
+		// regular expression to match only numbers
+		var reg = /^\d+$/;
+		// regular expression to match only alphanumeric characters and spaces
+		// var re = /^[\w ]+$/;
+		function checkDoc(form)
+	    {
+			// validation fails if the input is blank
+			if(form.docId.value == "") {
+				alert("Error: Input is empty!\nPlease enter search information.");
+				form.docId.focus();
+				return false;
+			}
+			// validation fails if the input doesn't match our regular expression
+			if(!reg.test(form.docId.value)) {
+					alert("Error: Input contains invalid characters!\nPlease enter numbers only.");
+					form.docId.focus();
+					return false;
+			}
+			// validation was successful
+			return true;
+		}
+		function checkPat(form)
+	    {
+			// validation fails if the input is blank
+			if(form.patId.value == "") {
+				alert("Error: Input is empty!\nPlease enter search information.");
+				form.patId.focus();
+				return false;
+			}
+			// validation fails if the input doesn't match our regular expression
+			if(!reg.test(form.patId.value)) {
+					alert("Error: Input contains invalid characters!\nPlease enter numbers only.");
+					form.patId.focus();
+					return false;
+			}
+			// validation was successful
+			return true;
+		}
+		function checkRoom(form)
+	    {
+			// validation fails if the input is blank
+			if(form.roomNum.value == "") {
+				alert("Error: Input is empty!\nPlease enter search information.");
+				form.roomNum.focus();
+				return false;
+			}
+			// validation fails if the input doesn't match our regular expression
+			if(!reg.test(form.roomNum.value)) {
+					alert("Error: Input contains invalid characters!\nPlease enter numbers only.");
+					form.roomNum.focus();
+					return false;
+			}
+			// validation was successful
+			return true;
+		}
+		function checkPharm(form)
+	    {
+			// validation fails if the input is blank
+			if(form.pharmId.value == "") {
+				alert("Error: Input is empty!\nPlease enter search information.");
+				form.pharmId.focus();
+				return false;
+			}
+			// validation fails if the input doesn't match our regular expression
+			if(!reg.test(form.pharmId.value)) {
+					alert("Error: Input contains invalid characters!\nPlease enter numbers only.");
+					form.pharmId.focus();
+					return false;
+			}
+			// validation was successful
+			return true;
+		}
+		function checkPre(form)
+	    {
+			// validation fails if the input is blank
+			if(form.ordNum.value == "") {
+				alert("Error: Input is empty!\nPlease enter search information.");
+				form.ordNum.focus();
+				return false;
+			}
+			// validation fails if the input doesn't match our regular expression
+			if(!reg.test(form.ordNum.value)) {
+					alert("Error: Input contains invalid characters!\nPlease enter numbers only.");
+					form.ordNum.focus();
+					return false;
+			}
+			// validation was successful
+			return true;
+		}
+	</script>
+</head>
+<body bgcolor="green">
+	<h1 style="font-size:50px; text-align:center">Delete Record</h1>
+	<a href="index.html">Search Record</a>
+	<a href="addrecord.html">Add Record</a>
+	<div>
+		<h3>Doctors</h3>
+		<form name="doctor" method="post" action="delDoc.php" onSubmit="return checkDoc(this)">
+			<input type="number" name="docId">ID<br>
+			<input type="submit" value="Delete"><br>
+		</form>
+	</div>
+	<div>
+		<h3>Patients</h3>
+		<form name="patient" method="post" action="delPat.php" onSubmit="return checkPat(this)">
+			<input type="text" name="patId">ID<br>
+			<input type="submit" value="Delete"><br>
+		</form>
+	</div>
+	<div>
+		<h3>Rooms</h3>
+		<form name="room" method="post" action="delRoom.php" onSubmit="return checkRoom(this)">
+			<input type="text" name="roomNum">Number<br>
+			<input type="submit" value="Delete"><br>
+		</form>
+	</div>
+	<div>
+		<h3>Prescriptions</h3>
+		<form name="prescription" method="post" action="delPre.php" onSubmit="return checkPre(this)">
+			<input type="text" name="ordNum">Order Number<br>
+			<input type="submit" value="Delete"><br>
+		</form>
+	</div>
+	<div>
+		<h3>Pharmacists</h3>
+		<form name="pharmacist" method="post" action="delPharm.php" onSubmit="return checkPharm(this)">
+			<input type="text" name="pharmId">ID<br>
+			<input type="submit" value="Delete"><br>
+		</form>
+	</div>
+</body>
+</html>
